@@ -1,5 +1,5 @@
 const CACHE = 'photopolaroid-v1';
-const BASE = '/PhotopaloroidProo/';
+const BASE = '/PhotopolaroidProByTino/';
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll([BASE, BASE+'index.html', BASE+'icon-192.png', BASE+'icon-512.png'])));
   self.skipWaiting();
