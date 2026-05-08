@@ -1,6 +1,7 @@
 const CACHE = 'photopolaroid-v1';
+const BASE = '/PhotopaloroidProo/';
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./index.html','./icon-192.png','./icon-512.png'])));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll([BASE, BASE+'index.html', BASE+'icon-192.png', BASE+'icon-512.png'])));
   self.skipWaiting();
 });
 self.addEventListener('activate', e => { e.waitUntil(clients.claim()); });
